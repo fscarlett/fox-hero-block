@@ -79,13 +79,6 @@ export default function Edit(props) {
 		[props.attributes.mobImgId],
 	);
 
-	const hasMultiButtons =
-		props.attributes.heroHasLink2 || props.attributes.heroHasLink3;
-
-	const hero_paragraph_class = !hasMultiButtons
-		? "vh-inner-hero-paragraph"
-		: "vh-inner-hero-para-multibutton";
-
 	return (
 		<>
 			<section className={`${className}`} {...blockProps}>
@@ -100,43 +93,9 @@ export default function Edit(props) {
 					<div className="gb-container vh-inner-hero-content-container">
 						<div className="vh-inner-hero-content-wrapper">
 							<h1>{props.attributes.heroTitle}</h1>
-							<p className={`${hero_paragraph_class}`}>
+							<p className="vh-inner-hero-paragraph">
 								{props.attributes.heroParagraph}
 							</p>
-							{!!props.attributes.heroHasLink && !hasMultiButtons && (
-								<a href={props.attributes.heroLinkUrl}>
-									{props.attributes.heroLinkText}
-								</a>
-							)}
-
-							{!!hasMultiButtons && (
-								<div className="vh-inner-hero-multibutton-container">
-									{!!props.attributes.heroHasLink && (
-										<a
-											href={props.attributes.heroLinkUrl}
-											className="vh-multi-button"
-										>
-											{props.attributes.heroLinkText}
-										</a>
-									)}
-									{!!props.attributes.heroHasLink2 && (
-										<a
-											href={props.attributes.heroLinkUrl2}
-											className="vh-multi-button"
-										>
-											{props.attributes.heroLinkText2}
-										</a>
-									)}
-									{!!props.attributes.heroHasLink3 && (
-										<a
-											href={props.attributes.heroLinkUrl3}
-											className="vh-multi-button"
-										>
-											{props.attributes.heroLinkText3}
-										</a>
-									)}
-								</div>
-							)}
 						</div>
 					</div>
 				</div>
@@ -152,21 +111,6 @@ export default function Edit(props) {
 						<div className="vh-inner-hero-content-wrapper">
 							<h1>{props.attributes.heroTitle}</h1>
 							<p>{props.attributes.heroParagraph} </p>
-							{!!props.attributes.heroHasLink && (
-								<a href={props.attributes.heroLinkUrl}>
-									{props.attributes.heroLinkText}
-								</a>
-							)}
-							{!!props.attributes.heroHasLink2 && (
-								<a href={props.attributes.heroLinkUrl2}>
-									{props.attributes.heroLinkText2}
-								</a>
-							)}
-							{!!props.attributes.heroHasLink3 && (
-								<a href={props.attributes.heroLinkUrl3}>
-									{props.attributes.heroLinkText3}
-								</a>
-							)}
 						</div>
 					</div>
 				</div>
@@ -292,94 +236,7 @@ export default function Edit(props) {
 							props.setAttributes({ heroParagraph: newValue });
 						}}
 					/>
-					<ToggleControl
-						label="Hero Has Link Button"
-						checked={props.attributes.heroHasLink}
-						onChange={(newValue) => {
-							props.setAttributes({
-								heroHasLink: newValue,
-							});
-						}}
-					/>
-					{!!props.attributes.heroHasLink && (
-						<TextControl
-							label="Hero Button Link Text"
-							value={props.attributes.heroLinkText}
-							onChange={(newValue) => {
-								props.setAttributes({ heroLinkText: newValue });
-							}}
-						/>
-					)}
 
-					{!!props.attributes.heroHasLink && (
-						<TextControl
-							label="Hero Button Link Url"
-							value={props.attributes.heroLinkUrl}
-							onChange={(newValue) => {
-								props.setAttributes({ heroLinkUrl: newValue });
-							}}
-						/>
-					)}
-					<Divider />
-
-					<ToggleControl
-						label="Hero Has Button 2"
-						checked={props.attributes.heroHasLink2}
-						onChange={(newValue) => {
-							props.setAttributes({
-								heroHasLink2: newValue,
-							});
-						}}
-					/>
-					{!!props.attributes.heroHasLink2 && (
-						<TextControl
-							label="Hero Button 2 Text"
-							value={props.attributes.heroLinkText2}
-							onChange={(newValue) => {
-								props.setAttributes({ heroLinkText2: newValue });
-							}}
-						/>
-					)}
-
-					{!!props.attributes.heroHasLink2 && (
-						<TextControl
-							label="Hero Button 2 Link Url"
-							value={props.attributes.heroLinkUrl2}
-							onChange={(newValue) => {
-								props.setAttributes({ heroLinkUrl2: newValue });
-							}}
-						/>
-					)}
-					<Divider />
-
-					<ToggleControl
-						label="Hero Has Button 3"
-						checked={props.attributes.heroHasLink3}
-						onChange={(newValue) => {
-							props.setAttributes({
-								heroHasLink3: newValue,
-							});
-						}}
-					/>
-					{!!props.attributes.heroHasLink3 && (
-						<TextControl
-							label="Hero Button 3 Text"
-							value={props.attributes.heroLinkText3}
-							onChange={(newValue) => {
-								props.setAttributes({ heroLinkText3: newValue });
-							}}
-						/>
-					)}
-
-					{!!props.attributes.heroHasLink3 && (
-						<TextControl
-							label="Hero Button 3 Link Url"
-							value={props.attributes.heroLinkUrl3}
-							onChange={(newValue) => {
-								props.setAttributes({ heroLinkUrl3: newValue });
-							}}
-						/>
-					)}
 					<Divider />
 				</PanelBody>
 			</InspectorControls>

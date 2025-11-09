@@ -14,7 +14,7 @@
 
 <?php	
 // thiings may happen here 
-
+// $hero_img_url = $attributes['pickedHeroImgUrl'];
 ?>
 
 <section>
@@ -29,9 +29,9 @@
         >
           <div class="gb-container vh-inner-hero-content-container">
             <div class="vh-inner-hero-content-wrapper">
-							<h1>hello world</h1>
+							<!-- <h1>hello people</h1> -->
               <h1><? echo $attributes['heroTitle']; ?></h1>
-              <p class="<? echo $hero_paragraph_class; ?>"><? echo $attributes['heroParagraph']; ?></p>
+              <p class="vh-inner-hero-paragraph"><? echo $attributes['heroParagraph']; ?></p>
               
 
              

@@ -87,8 +87,6 @@ function Edit(props) {
     const imgData = select("core").getEntityRecord("postType", "attachment", props.attributes.mobImgId);
     return imgData;
   }, [props.attributes.mobImgId]);
-  const hasMultiButtons = props.attributes.heroHasLink2 || props.attributes.heroHasLink3;
-  const hero_paragraph_class = !hasMultiButtons ? "vh-inner-hero-paragraph" : "vh-inner-hero-para-multibutton";
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("section", {
       className: `${className}`,
@@ -107,26 +105,8 @@ function Edit(props) {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
               children: props.attributes.heroTitle
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              className: `${hero_paragraph_class}`,
+              className: "vh-inner-hero-paragraph",
               children: props.attributes.heroParagraph
-            }), !!props.attributes.heroHasLink && !hasMultiButtons && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
-              href: props.attributes.heroLinkUrl,
-              children: props.attributes.heroLinkText
-            }), !!hasMultiButtons && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-              className: "vh-inner-hero-multibutton-container",
-              children: [!!props.attributes.heroHasLink && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
-                href: props.attributes.heroLinkUrl,
-                className: "vh-multi-button",
-                children: props.attributes.heroLinkText
-              }), !!props.attributes.heroHasLink2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
-                href: props.attributes.heroLinkUrl2,
-                className: "vh-multi-button",
-                children: props.attributes.heroLinkText2
-              }), !!props.attributes.heroHasLink3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
-                href: props.attributes.heroLinkUrl3,
-                className: "vh-multi-button",
-                children: props.attributes.heroLinkText3
-              })]
             })]
           })
         })
@@ -144,15 +124,6 @@ function Edit(props) {
               children: props.attributes.heroTitle
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
               children: [props.attributes.heroParagraph, " "]
-            }), !!props.attributes.heroHasLink && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
-              href: props.attributes.heroLinkUrl,
-              children: props.attributes.heroLinkText
-            }), !!props.attributes.heroHasLink2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
-              href: props.attributes.heroLinkUrl2,
-              children: props.attributes.heroLinkText2
-            }), !!props.attributes.heroHasLink3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
-              href: props.attributes.heroLinkUrl3,
-              children: props.attributes.heroLinkText3
             })]
           })
         })
@@ -259,78 +230,6 @@ function Edit(props) {
           onChange: newValue => {
             props.setAttributes({
               heroParagraph: newValue
-            });
-          }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-          label: "Hero Has Link Button",
-          checked: props.attributes.heroHasLink,
-          onChange: newValue => {
-            props.setAttributes({
-              heroHasLink: newValue
-            });
-          }
-        }), !!props.attributes.heroHasLink && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-          label: "Hero Button Link Text",
-          value: props.attributes.heroLinkText,
-          onChange: newValue => {
-            props.setAttributes({
-              heroLinkText: newValue
-            });
-          }
-        }), !!props.attributes.heroHasLink && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-          label: "Hero Button Link Url",
-          value: props.attributes.heroLinkUrl,
-          onChange: newValue => {
-            props.setAttributes({
-              heroLinkUrl: newValue
-            });
-          }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-          label: "Hero Has Button 2",
-          checked: props.attributes.heroHasLink2,
-          onChange: newValue => {
-            props.setAttributes({
-              heroHasLink2: newValue
-            });
-          }
-        }), !!props.attributes.heroHasLink2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-          label: "Hero Button 2 Text",
-          value: props.attributes.heroLinkText2,
-          onChange: newValue => {
-            props.setAttributes({
-              heroLinkText2: newValue
-            });
-          }
-        }), !!props.attributes.heroHasLink2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-          label: "Hero Button 2 Link Url",
-          value: props.attributes.heroLinkUrl2,
-          onChange: newValue => {
-            props.setAttributes({
-              heroLinkUrl2: newValue
-            });
-          }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-          label: "Hero Has Button 3",
-          checked: props.attributes.heroHasLink3,
-          onChange: newValue => {
-            props.setAttributes({
-              heroHasLink3: newValue
-            });
-          }
-        }), !!props.attributes.heroHasLink3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-          label: "Hero Button 3 Text",
-          value: props.attributes.heroLinkText3,
-          onChange: newValue => {
-            props.setAttributes({
-              heroLinkText3: newValue
-            });
-          }
-        }), !!props.attributes.heroHasLink3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-          label: "Hero Button 3 Link Url",
-          value: props.attributes.heroLinkUrl3,
-          onChange: newValue => {
-            props.setAttributes({
-              heroLinkUrl3: newValue
             });
           }
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalDivider, {})]
