@@ -13,7 +13,6 @@
 <?php // echo get_block_wrapper_attributes(); ?>
 
 <?php	
-// thiings may happen here 
 // $hero_img_url = $attributes['pickedHeroImgUrl'];
 $hero_title = $attributes['heroTitle'] ? $attributes['heroTitle'] : get_the_title();
 ?>
@@ -21,18 +20,18 @@ $hero_title = $attributes['heroTitle'] ? $attributes['heroTitle'] : get_the_titl
 <section>
 					<!-- desktop -->				
         <div
-          class="vh-inner-hero-container gb-container alignfull"
+          class="fox-inner-hero-container gb-container alignfull"
           style=
             "background-image: url(<? echo $attributes['pickedHeroImgUrl'] ?>);
             background-position: center <? echo $attributes['imgVertPosition'] ?>%;
             min-height: 600px;"
           
         >
-          <div class="gb-container vh-inner-hero-content-container">
-            <div class="vh-inner-hero-content-wrapper">
+          <div class="gb-container fox-inner-hero-content-container">
+            <div class="fox-inner-hero-content-wrapper">
 							<!-- <h1>hello people</h1> -->
               <h1><? echo $hero_title; ?></h1>
-              <p class="vh-inner-hero-paragraph"><? echo $attributes['heroParagraph']; ?></p>
+              <p class="fox-inner-hero-paragraph"><? echo $attributes['heroParagraph']; ?></p>
               
 
              
@@ -43,14 +42,14 @@ $hero_title = $attributes['heroTitle'] ? $attributes['heroTitle'] : get_the_titl
 
         <!-- mobile -->
         <div
-          class="vh-inner-hero-container-mob gb-container alignfull"
+          class="fox-inner-hero-container-mob gb-container alignfull"
           style=
             "background-image: url(<? echo $attributes['pickedMobImgUrl'] ?>);
             background-position: center <? echo $attributes['imgVertPosition'] ?>%;"
           
         >
-          <div class="gb-container vh-inner-hero-content-container">
-            <div class="vh-inner-hero-content-wrapper">
+          <div class="gb-container fox-inner-hero-content-container">
+            <div class="fox-inner-hero-content-wrapper">
               <h1><? echo $attributes['heroTitle']; ?></h1>
               <p><? echo $attributes['heroParagraph']; ?></p>
               

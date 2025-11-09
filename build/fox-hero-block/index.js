@@ -99,34 +99,34 @@ function Edit(props) {
       className: `${className}`,
       ...blockProps,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "vh-inner-hero-container gb-container alignfull",
+        className: "fox-inner-hero-container gb-container alignfull",
         style: {
           // backgroundImage: `url(${props.attributes.heroImgSourceUrl})`,
           backgroundImage: `url(${mainHeroImage})`,
           backgroundPosition: `center ${props.attributes.imgVertPosition}%`
         },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-          className: "gb-container vh-inner-hero-content-container",
+          className: "gb-container fox-inner-hero-content-container",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "vh-inner-hero-content-wrapper",
+            className: "fox-inner-hero-content-wrapper",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
               children: props.attributes.heroTitle || page_title
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              className: "vh-inner-hero-paragraph",
+              className: "fox-inner-hero-paragraph",
               children: props.attributes.heroParagraph
             })]
           })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "vh-inner-hero-container-mob gb-container alignfull",
+        className: "fox-inner-hero-container-mob gb-container alignfull",
         style: {
           backgroundImage: `url(${props.attributes.heroImgMobSourceUrl})`,
           backgroundPosition: `center ${props.attributes.imgVertPosition}%`
         },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-          className: "gb-container vh-inner-hero-content-container",
+          className: "gb-container fox-inner-hero-content-container",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "vh-inner-hero-content-wrapper",
+            className: "fox-inner-hero-content-wrapper",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
               children: props.attributes.heroTitle
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
@@ -149,7 +149,7 @@ function Edit(props) {
             }) => {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
                 onClick: open,
-                className: "vh-img-picker-button",
+                className: "fox-img-picker-button",
                 children: "Select Hero Image"
               });
             },
@@ -170,7 +170,7 @@ function Edit(props) {
             }
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-          className: "vh-edit-controls-image-wrapper",
+          className: "fox-edit-controls-image-wrapper",
           children: !!props.attributes.heroImgId && !!image1?.source_url && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
             src: image1 ? image1?.source_url : "",
             height: 250,
@@ -196,7 +196,7 @@ function Edit(props) {
             }) => {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
                 onClick: open,
-                className: "vh-img-picker-button",
+                className: "fox-img-picker-button",
                 children: "Select Mobile Image"
               });
             },
@@ -217,7 +217,7 @@ function Edit(props) {
             }
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-          className: "vh-edit-controls-image-wrapper",
+          className: "fox-edit-controls-image-wrapper",
           children: !!props.attributes.mobImgId && !!image2?.source_url && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
             src: image2 ? image2?.source_url : "",
             height: 170,

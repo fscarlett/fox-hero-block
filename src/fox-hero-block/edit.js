@@ -94,17 +94,17 @@ export default function Edit(props) {
 		<>
 			<section className={`${className}`} {...blockProps}>
 				<div
-					className="vh-inner-hero-container gb-container alignfull"
+					className="fox-inner-hero-container gb-container alignfull"
 					style={{
 						// backgroundImage: `url(${props.attributes.heroImgSourceUrl})`,
 						backgroundImage: `url(${mainHeroImage})`,
 						backgroundPosition: `center ${props.attributes.imgVertPosition}%`,
 					}}
 				>
-					<div className="gb-container vh-inner-hero-content-container">
-						<div className="vh-inner-hero-content-wrapper">
+					<div className="gb-container fox-inner-hero-content-container">
+						<div className="fox-inner-hero-content-wrapper">
 							<h1>{props.attributes.heroTitle || page_title}</h1>
-							<p className="vh-inner-hero-paragraph">
+							<p className="fox-inner-hero-paragraph">
 								{props.attributes.heroParagraph}
 							</p>
 						</div>
@@ -112,14 +112,14 @@ export default function Edit(props) {
 				</div>
 
 				<div
-					className="vh-inner-hero-container-mob gb-container alignfull"
+					className="fox-inner-hero-container-mob gb-container alignfull"
 					style={{
 						backgroundImage: `url(${props.attributes.heroImgMobSourceUrl})`,
 						backgroundPosition: `center ${props.attributes.imgVertPosition}%`,
 					}}
 				>
-					<div className="gb-container vh-inner-hero-content-container">
-						<div className="vh-inner-hero-content-wrapper">
+					<div className="gb-container fox-inner-hero-content-container">
+						<div className="fox-inner-hero-content-wrapper">
 							<h1>{props.attributes.heroTitle}</h1>
 							<p>{props.attributes.heroParagraph} </p>
 						</div>
@@ -138,7 +138,7 @@ export default function Edit(props) {
 							allowedTypes={["image"]}
 							render={({ open }) => {
 								return (
-									<button onClick={open} className="vh-img-picker-button">
+									<button onClick={open} className="fox-img-picker-button">
 										Select Hero Image
 									</button>
 								);
@@ -156,7 +156,7 @@ export default function Edit(props) {
 							}}
 						></MediaUpload>
 					</MediaUploadCheck>
-					<div className="vh-edit-controls-image-wrapper">
+					<div className="fox-edit-controls-image-wrapper">
 						{!!props.attributes.heroImgId && !!image1?.source_url && (
 							<img
 								src={image1 ? image1?.source_url : ""}
@@ -184,7 +184,7 @@ export default function Edit(props) {
 							allowedTypes={["image"]}
 							render={({ open }) => {
 								return (
-									<button onClick={open} className="vh-img-picker-button">
+									<button onClick={open} className="fox-img-picker-button">
 										Select Mobile Image
 									</button>
 								);
@@ -202,7 +202,7 @@ export default function Edit(props) {
 							}}
 						></MediaUpload>
 					</MediaUploadCheck>
-					<div className="vh-edit-controls-image-wrapper">
+					<div className="fox-edit-controls-image-wrapper">
 						{!!props.attributes.mobImgId && !!image2?.source_url && (
 							<img
 								src={image2 ? image2?.source_url : ""}
