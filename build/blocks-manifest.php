@@ -16,6 +16,44 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
+		'attributes' => array(
+			'heroImgId' => array(
+				'type' => 'number',
+				'default' => '0'
+			),
+			'pickedHeroImgUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'mobImgId' => array(
+				'type' => 'number',
+				'default' => '0'
+			),
+			'pickedMobImgUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'heroImgSourceUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'heroImgMobSourceUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'imgVertPosition' => array(
+				'type' => 'string',
+				'default' => '0'
+			),
+			'heroTitle' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'heroParagraph' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
 		'textdomain' => 'fox-hero-block',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',

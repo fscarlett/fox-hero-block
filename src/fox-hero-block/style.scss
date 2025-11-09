@@ -5,8 +5,149 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-fox-hero-block {
-	background-color: #eee;
-	color: #222;
-	padding: 5px;
+// .wp-block-create-block-fox-hero-block {
+// 	background-color: #bef;
+// 	color: #222;
+// 	padding: 5px;
+// }
+
+* {
+	box-sizing: border-box;
+}
+
+body.post-type-vh_quotes .block-editor-block-list__layout {
+	display: none;
+}
+
+.vh-edit-controls-image-wrapper {
+	padding: 10px 0;
+}
+
+.vh-img-picker-button {
+	background-color: #a1d4f4;
+	border-radius: 3px;
+	border-width: 1px;
+	font-size: 15px;
+	padding: 6px 10px 8px;
+}
+
+hr.components-divider {
+	border-bottom: 1px solid #bbb;
+}
+
+.vh-inner-hero-container {
+	padding: 0 10px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #bef;
+	min-height: 600px;
+	color: #777;
+}
+
+.vh-inner-hero-container-mob {
+	display: none;
+	padding: 0 10px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #3d88e9;
+	min-height: 600px;
+	color: #777;
+}
+
+.vh-inner-hero-content-container {
+	max-width: 1200px;
+	// padding-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.vh-inner-hero-content-wrapper {
+	max-width: 690px;
+	padding-top: 60px;
+	padding-bottom: 100px;
+	color: #777;
+	// display: flex;
+	// flex-direction: column;
+}
+
+.vh-inner-hero-container h1,
+.vh-inner-hero-container-mob h1 {
+	font-size: 74px;
+	font-weight: bold;
+	line-height: 1.15em;
+	margin-bottom: 0.5rem;
+}
+
+.vh-inner-hero-content-wrapper p.vh-inner-hero-paragraph {
+	font-size: 28px;
+	line-height: 1.3;
+	margin: 0 0 1.5em 0;
+	max-width: 500px;
+}
+
+.vh-inner-hero-content-wrapper p.vh-inner-hero-para-multibutton {
+	font-size: 28px;
+	line-height: 1.3;
+	margin: 0;
+	max-width: 500px;
+}
+
+.vh-inner-hero-multibutton-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	max-width: 330px;
+}
+
+.vh-inner-hero-container .vh-inner-hero-content-wrapper a,
+.vh-inner-hero-container-mob .vh-inner-hero-content-wrapper a {
+	display: inline-block;
+	font-size: 18px;
+	line-height: 1.2;
+	margin: 10px 0;
+	background-color: transparent;
+	color: #fff;
+	border: 2px solid #fff;
+	font-weight: bold;
+	padding: 10px 40px;
+	text-decoration: none;
+}
+
+.vh-inner-hero-container a.vh-multi-button,
+.vh-inner-hero-container-mob a.vh-multi-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	// width: 285px;
+}
+
+.vh-inner-hero-container .vh-inner-hero-content-wrapper a:hover {
+	background-color: #fff;
+	color: #194784;
+}
+
+@media screen and (max-width: 1100px) {
+	.vh-inner-hero-container-mob {
+		display: block;
+	}
+
+	.vh-inner-hero-container {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.vh-inner-hero-container h1,
+	.vh-inner-hero-container-mob h1 {
+		font-size: 56px;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	.vh-inner-hero-container h1,
+	.vh-inner-hero-container-mob h1 {
+		font-size: 48px;
+	}
 }

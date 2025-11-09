@@ -1,5 +1,5 @@
 === Fox Hero Block ===
-Contributors:      The WordPress Contributors
+Contributors:      Fox Scarlett
 Tags:              block
 Tested up to:      6.7
 Stable tag:        0.1.0
