@@ -87,6 +87,13 @@ function Edit(props) {
     const imgData = select("core").getEntityRecord("postType", "attachment", props.attributes.mobImgId);
     return imgData;
   }, [props.attributes.mobImgId]);
+
+  // Get the current post/page title
+  const page_title = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
+    const currentPostId = select("core/editor").getCurrentPostId();
+    const currentPost = select("core").getEntityRecord("postType", select("core/editor").getCurrentPostType(), currentPostId);
+    return currentPost?.title?.rendered || "";
+  }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("section", {
       className: `${className}`,
@@ -103,7 +110,7 @@ function Edit(props) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "vh-inner-hero-content-wrapper",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
-              children: props.attributes.heroTitle
+              children: props.attributes.heroTitle || page_title
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               className: "vh-inner-hero-paragraph",
               children: props.attributes.heroParagraph

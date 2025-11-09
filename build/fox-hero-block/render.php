@@ -15,6 +15,7 @@
 <?php	
 // thiings may happen here 
 // $hero_img_url = $attributes['pickedHeroImgUrl'];
+$hero_title = $attributes['heroTitle'] ? $attributes['heroTitle'] : get_the_title();
 ?>
 
 <section>
@@ -30,7 +31,7 @@
           <div class="gb-container vh-inner-hero-content-container">
             <div class="vh-inner-hero-content-wrapper">
 							<!-- <h1>hello people</h1> -->
-              <h1><? echo $attributes['heroTitle']; ?></h1>
+              <h1><? echo $hero_title; ?></h1>
               <p class="vh-inner-hero-paragraph"><? echo $attributes['heroParagraph']; ?></p>
               
 

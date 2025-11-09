@@ -79,6 +79,17 @@ export default function Edit(props) {
 		[props.attributes.mobImgId],
 	);
 
+	// Get the current post/page title
+	const page_title = useSelect((select) => {
+		const currentPostId = select("core/editor").getCurrentPostId();
+		const currentPost = select("core").getEntityRecord(
+			"postType",
+			select("core/editor").getCurrentPostType(),
+			currentPostId,
+		);
+		return currentPost?.title?.rendered || "";
+	}, []);
+
 	return (
 		<>
 			<section className={`${className}`} {...blockProps}>
@@ -92,7 +103,7 @@ export default function Edit(props) {
 				>
 					<div className="gb-container vh-inner-hero-content-container">
 						<div className="vh-inner-hero-content-wrapper">
-							<h1>{props.attributes.heroTitle}</h1>
+							<h1>{props.attributes.heroTitle || page_title}</h1>
 							<p className="vh-inner-hero-paragraph">
 								{props.attributes.heroParagraph}
 							</p>
