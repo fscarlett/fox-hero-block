@@ -50,7 +50,7 @@ $hero_title = $attributes['heroTitle'] ? $attributes['heroTitle'] : get_the_titl
         >
           <div class="gb-container fox-inner-hero-content-container">
             <div class="fox-inner-hero-content-wrapper">
-              <h1><? echo $attributes['heroTitle']; ?></h1>
+              <h1><? echo $hero_title; ?></h1>
               <p><? echo $attributes['heroParagraph']; ?></p>
               
              
