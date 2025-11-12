@@ -79,6 +79,8 @@ export default function Edit(props) {
 		[props.attributes.mobImgId],
 	);
 
+	const mobileHeroImage = image2 ? image2?.source_url : "";
+
 	// Get the current post/page title
 	const page_title = useSelect((select) => {
 		const currentPostId = select("core/editor").getCurrentPostId();
@@ -114,13 +116,13 @@ export default function Edit(props) {
 				<div
 					className="fox-inner-hero-container-mob gb-container alignfull"
 					style={{
-						backgroundImage: `url(${props.attributes.heroImgMobSourceUrl})`,
+						backgroundImage: `url(${mobileHeroImage})`,
 						backgroundPosition: `center ${props.attributes.imgVertPosition}%`,
 					}}
 				>
 					<div className="gb-container fox-inner-hero-content-container">
 						<div className="fox-inner-hero-content-wrapper">
-							<h1>{props.attributes.heroTitle}</h1>
+							<h1>{props.attributes.heroTitle || page_title}</h1>
 							<p>{props.attributes.heroParagraph} </p>
 						</div>
 					</div>

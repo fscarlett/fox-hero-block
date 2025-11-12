@@ -87,6 +87,7 @@ function Edit(props) {
     const imgData = select("core").getEntityRecord("postType", "attachment", props.attributes.mobImgId);
     return imgData;
   }, [props.attributes.mobImgId]);
+  const mobileHeroImage = image2 ? image2?.source_url : "";
 
   // Get the current post/page title
   const page_title = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
@@ -120,7 +121,7 @@ function Edit(props) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "fox-inner-hero-container-mob gb-container alignfull",
         style: {
-          backgroundImage: `url(${props.attributes.heroImgMobSourceUrl})`,
+          backgroundImage: `url(${mobileHeroImage})`,
           backgroundPosition: `center ${props.attributes.imgVertPosition}%`
         },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
@@ -128,7 +129,7 @@ function Edit(props) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "fox-inner-hero-content-wrapper",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
-              children: props.attributes.heroTitle
+              children: props.attributes.heroTitle || page_title
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
               children: [props.attributes.heroParagraph, " "]
             })]
