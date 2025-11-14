@@ -7,6 +7,9 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+.wp-block-create-block-fox-hero-block {
+  margin: 0;
+}
 * {
   box-sizing: border-box;
 }
